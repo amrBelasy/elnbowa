@@ -1,0 +1,58 @@
+{% load staticfiles %}
+
+<nav class="ar1 navbar navbar-default desktop-menu">
+    <div class="container-fluid navbar-inner" >
+
+                <div class="navbar-logo">
+                        <a href="/" class="logo-link d-flex align-items-center" data-aos="zoom-in" data-aos-delay="700"
+                            data-aos-easing="ease-in-out" data-aos-duration="700">
+
+                            <img src="{% static 'website/img/logo/b5.jpg' %}" alt="" class="logo-img logo-light" style="background-color: white; border-radius: 50%">
+                            <img src="{% static 'website/img/logo/b5.jpg' %}" alt="" class="logo-img logo-dark" style="background-color: white; border-radius: 50%"
+                                style="filter: brightness(0);">
+                        </a>
+                </div>
+
+        <div class="navbar-menu" >
+            <ul class="navbar-menu-list " style="margin-left: 150px">
+                <li class="menu-primary-item menu-item-has-children">
+                    <a class="mobile-menu-toggle lead" href="/">الرئيسية</a>
+                </li>
+                <li class="menu-primary-item menu-item-has-children">
+                    <a class="mobile-menu-toggle lead" href="{% url 'depart' %}">الاقسام</a>
+                </li>
+                <li class="menu-primary-item menu-item-has-children">
+                    <a class="mobile-menu-toggle lead" href="{% url 'contact' %}">تواصل معنا</a>
+                </li>
+                <li class="menu-primary-item menu-item-has-children">
+                    <a class="mobile-menu-toggle lead" href="{% url 'lawful' %}">الرقية الشرعية</a>
+                </li>
+                <li class="menu-primary-item menu-item-has-children">
+                    <a class="mobile-menu-toggle lead" href="{% url 'grass' %}">أعشاب نادرة</a>
+                </li>
+                <li class="menu-primary-item menu-item-has-children">
+                    <a class="mobile-menu-toggle lead" href="https://equran.me/"> القرءان الكريم</a>
+                </li>
+
+            </ul>
+
+              <div class="navbar-additional align-items-center">
+                <div class="social-box">
+                    <a href="https://www.youtube.com/channel/UCYIR9VW_TCfzz4kvkMrNwiA" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+             </div>
+
+      </div>
+
+
+        <button class="hamburger justify-content-center align-items-center hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+        </button>
+
+
+  </div>
+</nav>

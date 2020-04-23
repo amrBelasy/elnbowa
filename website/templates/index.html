@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %} بيت النبوة  {% endblock %}
+
+{% block body %}
+        <section class="ar hero-header hero-default dark_overlay" 
+            style="background-image:url('{% static 'website/img/home/4.jpg'%}');background-attachment:fixed;"
+            data-section-type="canvas_circles">
+            <div id="canvas-parent" class="canvas-wrapper">
+                <canvas id="canvas-hero"></canvas>
+            </div>
+
+            <div class="container hero-content hero-center d-flex align-items-center">
+                <div class="content-default">
+
+                    <h1 class="display-4 content-heading z-index-100" data-aos="fade-down" data-aos-delay="400"
+                        data-aos-easing="ease-in-out" data-aos-duration="700">
+                        <!-- <br> <span class="highlight"> ❤️</span> -->
+                        بيت النبوة 
+                          
+                    </h1> 
+                    <br>
+                    <p class="lead text-light z-index-100" data-aos="fade-down" data-aos-delay="400"
+                        data-aos-easing="ease-in-out" data-aos-duration="700">لعلاج السحر والحسد والمس وتيسير الحياة العائلية والعملية وطرد الشيطان وتسخير القرين كما يوجد لدينا خواتم روحانية وجميع الاعشاب النادرة والمفاجأت لدينا بأذن الله تعالي جوهرة علم الروحانيات (هيلوت)</p><br>
+                        <p class="lead text-light z-index-100" data-aos="fade-down" data-aos-delay="400"
+                        data-aos-easing="ease-in-out" data-aos-duration="700">الكشف مجاني</p>  
+                    <p class="lead text-light z-index-100" data-aos="fade-down" data-aos-delay="400"
+                        data-aos-easing="ease-in-out" data-aos-duration="700"><span class="typed-words"></span>+ </p>
+                    <br><br>
+                    <a href="{% url 'contact'%}" class="lead text-light button-submit z-index-100" data-aos="fade-down"
+                        data-aos-delay="400" data-aos-easing="ease-in-out" data-aos-duration="700">تواصل معنا</a>
+
+
+                </div>
+                <div class="angle-down" data-aos="zoom-in" data-aos-delay="1000" data-aos-anchor=".hero-header"
+                    data-aos-easing="ease-in-out" data-aos-duration="700">
+                    <p>انتقل لأسفل </p>
+                    <i class="fa fa-angle-double-down"></i>
+                </div>
+            </div>
+        </section>
+        <!-- [4] About Section -->
+         
+
+        <section class="ar blog-section large-section gray-section">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <h2 class="section-title text-center title-divider" data-bigletter="" data-aos="fade-up"
+                            data-aos-delay="300" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+                            data-aos-duration="700"> الصور </h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row blog-grid-row">
+                        {% for images in image %}
+                    <div class="col-lg-4">
+                         
+                        <article class="post-grid white-section" data-aos="fade-up" data-aos-delay="100"
+                            data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+                            data-aos-duration="800">
+                            <div class="post-image-side align-items-center">
+                               <div class="tag bg-primary text-white">{{images.title}} </div> 
+                               {% if images.image %}
+                                    <img src="{{ images.image.url}}" style="width:100% !important; height:450px;"
+                                        alt="" class="img-fluid">
+                                {% endif %}
+                            </div>
+                            <div class="post-content-side" style="text-align: center">
+                                    {{ images.description }}
+                                
+                               
+                                <div class="align-items-center" style="padding-top: 50px">
+                                    <a href="{% url 'contact'%}" class=" text-light button-submit z-index-100" data-aos=""
+                                        data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-duration="300">أطلب الان</a>
+                                </div>
+                            </div>
+                           
+                        </article>    
+                          
+                    </div>
+                    {% endfor %} 
+                </div>
+            </div>
+            
+
+        </section>
+
+       
+
+        <!-- [8] Blockquote Section -->
+        <section class="ar simple-background blockquote-section-type-1 parallax-window default_overlay"
+            data-src="{% static 'website/img/home/home.jpg'%}" data-speed="0.4">
+            <div class="container blockquote-wrapper d-flex align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col blockquote-col d-flex justify-content-center" >
+                        <blockquote data-aos="zoom-in" data-aos-delay="100" data-aos-anchor-placement="top-bottom" style="background-color: #1565C0;"
+                            data-aos-easing="ease-in-out" data-aos-duration="800">
+                            <h4>بيت النبوة ,لتيسير الحياة العائلية والعملية ,لجميع الناس</h4>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- [6] Counter Section -->
+         <section class="ar counters-section-type-2">
+            <div class="container-fluid">
+                <div class="row counters-wrapper justify-content-center">
+                    <div class="col-sm-3 col-6 counter-box first-side d-flex flex-column align-items-center"
+                        data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="top-bottom"
+                        data-aos-easing="ease-in" data-aos-duration="700">
+                        <p class="title-counter">الاقسام</p>
+                        <span class="prop-obj prop-obj1" data-count="10">0</span>
+                        <span class="prop-ob"> +</span>
+                    </div>
+                    <div class="col-sm-3 col-6 counter-box second-side d-flex flex-column align-items-center"
+                        data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-bottom"
+                        data-aos-easing="ease-in" data-aos-duration="700">
+                        <p class="title-counter">الصفقات الناجحه</p>
+                        <span class="prop-obj prop-obj2" data-count="100">0</span>
+                        <span class="prop-ob"> +</span>
+                    </div>
+                    <div class="col-sm-3 col-6 counter-box third-side d-flex flex-column align-items-center"
+                        data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-bottom"
+                        data-aos-easing="ease-in" data-aos-duration="700">
+                        <p class="title-counter">سنين الخبرة</p>
+                        <span class="prop-obj prop-obj3" data-count="10">0</span>
+                        <span class="prop-ob"> +</span>
+                    </div>
+                    <div class="col-sm-3 col-6 counter-box third-side d-flex flex-column align-items-center"
+                        data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-bottom"
+                        data-aos-easing="ease-in" data-aos-duration="700">
+                        <p class="title-counter">عدد التواصل</p>
+                        <span class="prop-obj prop-obj4" data-count="200">0</span>
+                        <span class="prop-ob"> +</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     
+
+        <!-- [12] Recent Events -->
+        <section class="ar recent-posts gray-section large-section"
+            style="background-image: url('{% static 'website/img/assets/absurdity.png'%}')">
+            <div class="container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <h2 class="section-title text-center title-divider" data-bigletter="" data-aos="fade-up"
+                                data-aos-delay="100" data-aos-anchor-placement="top-bottom"
+                                data-aos-easing="ease-in-out" data-aos-duration="700">بعض اراء عملائنا الكرام في خدمتنا </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row blog-wrapper">
+                    {% for opis in opinion %}
+                    <div class="col-lg-4">
+                        <div class="blog-card-wrapper hover3d-wrapper" data-aos="fade-right" data-aos-delay="100"
+                            data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+                            data-aos-duration="600">
+                            <div class="card-content hover3d-child">
+                                <div class="card-blog-header">
+                                    <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                        {% if opis.image %}
+                                            <img src="{{ opis.image.url}}" alt="image" style="width: 100%; height: 350px"
+                                                class="img-fluid img">
+                                        {% endif %}        
+                                            <div class="tag bg-primary text-white"> {{opis.job}}</div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-blog-body text-right">
+                                    <h5><a href="#"></a> {{opis.name}}</h5>
+                                    <p class="content"> {{opis.description}}</p>
+                                        <div class="card-blog-footer d-flex justify-content-between align-items-end">
+                                        <p class="date d-flex align-items-end">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            {{opis.date}}
+                                        </p>
+                                        <p class="info d-flex align-items-end">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+    </div>
+    </section>
+   
+     <script src="{% static 'website/js/typed.js'%}"></script>
+    <script>
+    
+        var typed = new Typed('.typed-words', {
+            strings: ["","201022881909"],
+            typeSpeed: 300,
+            backSpeed: 500,
+            backDelay: 1000,
+            startDelay: 500,
+            loop: true,
+            showCursor:false
+            
+        });
+     
+    </script>
+{% endblock %}

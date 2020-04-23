@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %} بيت النبوة - الاقسام {% endblock %}
+
+{% block body %}
+ 
+<header class="page-header parallax-window bg_img default_overlay" 
+        data-src="{% static 'website/img/home/4.jpg'%}">
+    <div class="container breadcrumbs-wrapper">
+        <div class="breadcrumbs d-flex flex-column justsify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        
+                        <h2 class="section-title text-center title-divider" data-bigletter="" data-aos="fade-down"
+                            data-aos-delay="100" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+                            data-aos-duration="700"> الاقسام</h2>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header> 
+<section class="ar blog-section large-section white-section">  
+    <section class="about-creative-section ">
+            <div class="container">
+            
+                <div class="row steps-wrapper">
+                    <div class="col-md-7 step-wrapper d-flex" data-aos="fade-up" data-aos-delay="300"
+                        data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out" data-aos-duration="600">
+                        <div>
+                            <h1 class="num display-4">01.</h1>
+                        </div>  
+                            <div class="align-items-center" style="padding-top: 20px">
+                                <a href="{% url 'depart1'%}" class=" text-light button-submit z-index-100" data-aos=""
+                                            data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-duration="300"> علاج السحر والحسد والمس</a>
+                            </div>
+                        
+                    </div>
+                    <div class="col-md-5 step-wrapper d-flex" data-aos="fade-up" data-aos-delay="350"
+                        data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out" data-aos-duration="600">
+                        <div>
+                            <h1 class="num display-4">02.</h1>
+                        </div>
+                        <div class="align-items-center" style="padding-top: 20px">
+                                <a href="{% url 'depart2'%}" class=" text-light button-submit z-index-100" data-aos=""
+                                            data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-duration="300"> الاعشاب النادرة</a>
+                        </div>
+                    </div>
+      
+                </div>
+            </div>
+        </section>
+
+        <section class="about-creative-section">
+                <div class="container">
+                    <div class="row steps-wrapper">
+                    <div class="col-md-7 step-wrapper d-flex" data-aos="fade-up" data-aos-delay="350"
+                        data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out" data-aos-duration="600">
+                        <div>
+                            <h1 class="num display-4">03.</h1>
+                        </div>
+                        <div class="align-items-center" style="padding-top: 20px">
+                                <a href="{% url 'depart3'%}" class=" text-light button-submit z-index-100" data-aos=""
+                                            data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-duration="300">خواتم روحانيه</a>
+                        </div>
+                    </div>    
+                    
+                        <div class="col-md-5 step-wrapper d-flex" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out" data-aos-duration="600">
+                            <div>
+                                <h1 class="num display-4">04.</h1>
+                            </div>
+                            <div class="align-items-center" style="padding-top: 20px;" >
+                                    <a href="{% url 'depart4'%}" class=" text-light button-submit z-index-100" data-aos=""
+                                                data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-duration="300">جوهرة علم الروحانيات(هيلوت)</a>
+                            </div>
+                        </div>
+                       
+                       
+                    </div>
+                    </div>
+                </div>
+            </section>
+</section>
+
+{% endblock %}

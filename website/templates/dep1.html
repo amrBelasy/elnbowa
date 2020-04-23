@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %} بيت النبوة علاج السحر والحسد والمس  {% endblock %}
+
+{% block body %}
+ 
+<header class="page-header parallax-window bg_img default_overlay" 
+        data-src="{% static 'website/img/home/4.jpg'%}">
+    <div class="container breadcrumbs-wrapper">
+        <div class="breadcrumbs d-flex flex-column justsify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        
+                        <h2 class="section-title text-center title-divider" data-bigletter="" data-aos="fade-down"
+                            data-aos-delay="100" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+                            data-aos-duration="700"> علاج السحر والحسد والمس</h2>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header> 
+
+
+<section class="ar blog-section large-section gray-section" >        
+        <div class="container">
+            <div class="row blog-grid-row">
+                    {% for images in image %}
+                <div class="col-lg-4">
+                     
+                    <article class="post-grid white-section" data-aos="fade-up" data-aos-delay="100"
+                        data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+                        data-aos-duration="800">
+                        <div class="post-image-side align-items-center">
+                           <div class="tag bg-primary text-white">{{images.title}} </div> 
+                                <img src="{{ images.image.url}}" style="width:100% !important; height:450px;"
+                                    alt="" class="img-fluid">
+                            
+                        </div>
+                        <div class="post-content-side" style="text-align: center">
+                                {{ images.description }}
+                            
+                           
+                            <div class="align-items-center" style="padding-top: 50px">
+                                <a href="{% url 'contact'%}" class=" text-light button-submit z-index-100" data-aos=""
+                                    data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-duration="300">أطلب الان</a>
+                            </div>
+                        </div>
+                       
+                    </article>    
+                      
+                </div>
+                {% endfor %} 
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

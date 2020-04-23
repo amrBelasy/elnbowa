@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %} بيت النبوة - الرقية الشرعية {% endblock %}
+
+{% block body %}
+
+<header class="page-header parallax-window bg_img default_overlay" 
+        data-src="{% static 'website/img/home/4.jpg'%}">
+    <div class="container breadcrumbs-wrapper">
+        <div class="breadcrumbs d-flex flex-column justsify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        
+                        <h2 class="section-title text-center title-divider" data-bigletter="" data-aos="fade-down"
+                            data-aos-delay="100" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+                            data-aos-duration="700">الرقية الشرعية</h2>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header> 
+
+
+<section class="ar blog-section large-section gray-section">
+        <div class="container">
+            <div class="row blog-grid-row">
+                    {% for v in video %}
+                <div class="col-lg-12">
+                     
+                    <article class="post-grid white-section" data-aos="fade-up" data-aos-delay="100"
+                        data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+                        data-aos-duration="800">
+                        <div class="post-image-side align-items-center">
+                            <div> {{ v.video | safe }}</div>
+                        </div>
+                       
+                        <div class="post-content-side">
+                                {{ v.description }}
+                            
+                        </div>
+                       
+                    </article>    
+                      
+                </div>
+                {% endfor %} 
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

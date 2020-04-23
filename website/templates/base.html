@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!Doctype html>
+<html lang="ar">
+
+<head>
+<title> {% block title %}  {% endblock %}</title>
+{% include "head.html" %}
+
+</head>
+
+
+<body >
+
+    <!-- header html -->
+    {% include 'header.html' %}
+
+    
+        {% block body %}
+
+        {% endblock %}
+    
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+    <!-- javascripts files -->
+    {% include 'scripts.html' %}
+
+</body>
+
+</html>
